@@ -26,10 +26,4 @@ public class Player {
     private String photo_url;
     @Enumerated(EnumType.STRING)
     private Position position;
-
-    /*@ManyToMany(mappedBy = "playersList")
-    @MapKeyJoinColumn(name = "season_id")
-    private Map<Season, Team> seasonTeamMap;
-    * */
-
 }

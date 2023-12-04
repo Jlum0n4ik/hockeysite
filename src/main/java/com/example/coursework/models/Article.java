@@ -1,5 +1,6 @@
 package com.example.coursework.models;
 
+import com.example.coursework.models.user.User;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.context.annotation.Configuration;
@@ -20,4 +21,7 @@ public class Article {
     private String header;
     @Column(table = "users_articles")
     private Date creation_date;
+    @OneToOne
+    @JoinColumn(name = "creator_id", table = "users_articles")
+    private User user;
 }
